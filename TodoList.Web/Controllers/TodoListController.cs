@@ -7,7 +7,7 @@ using TodoList.Data;
 using TodoList.Data.POCO;
 using TodoList.Services.EmailService;
 
-namespace TaskList.Web.Controllers
+namespace TodoList.Web.Controllers
 {
     public class TodoListController : Controller
     {

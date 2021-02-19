@@ -5,7 +5,7 @@ using System.Linq;
 using TodoList.Data;
 using TodoList.Web.Models;
 
-namespace TaskList.Web.Controllers
+namespace TodoList.Web.Controllers
 {
     public class HomeController : Controller
     {
