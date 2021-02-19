@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<TodoList.Data.POCO.TaskItem>
 @{
-    ViewData["Title"] = "Tasks";
+    ViewData["Title"] = "TodoList";
 }
 
 <div class="row">
     <div class="col-lg-12">
-        @Html.ActionLink("Create New Task", "Create", "Tasks", null, new { @class="btn btn-success" })
+        @Html.ActionLink("Create New Task", "Create", "TodoList", null, new { @class="btn btn-success" })
     </div>
 </div>
 <div class="row">
@@ -28,7 +28,7 @@
                             <td>@task.TaskName</td>
                             <td>@task.IsCompleted</td>
                             <td>@task.DateCreated.ToShortDateString()</td>
-                            <td class="text-center">@Html.ActionLink("Edit", "Edit", "Tasks", new { Id = task.Id }) | @Html.ActionLink("Delete", "Delete", "Tasks", new { Id = task.Id }) </td>
+                            <td class="text-center">@Html.ActionLink("Edit", "Edit", "TodoList", new { Id = task.Id }) | @Html.ActionLink("Delete", "Delete", "TodoList", new { Id = task.Id }) </td>
                         </tr>
                     }
                 }

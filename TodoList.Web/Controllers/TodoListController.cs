@@ -56,11 +56,11 @@ namespace TodoList.Web.Controllers
                 var editModel = _db.TaskItems.Find(model.Id);
                 editModel.TaskName = model.TaskName;
                 editModel.IsCompleted = model.IsCompleted;
-                if (editModel.IsCompleted)
-                {
-                    await _emailService.SendEmailAsync("Kevin@test.com", "KC@test.com", 
-                        "Task Was Completed", $"Task {editModel.Id} Was Completed on {DateTime.Now}");
-                }
+                //if (editModel.IsCompleted)
+                //{
+                //    await _emailService.SendEmailAsync("Kevin@test.com", "KC@test.com", 
+                //        "Task Was Completed", $"Task {editModel.Id} Was Completed on {DateTime.Now}");
+                //}
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }
